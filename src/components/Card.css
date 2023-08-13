@@ -1,0 +1,70 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  /* padding: 16px; */
+  margin: 16px;
+  min-width: 300px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative; /* Added to allow absolute positioning within the card */
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  text-align: left;
+}
+
+.ticket-id {
+  font-size: 5px; /* Adjust the font size as needed */
+  font-weight: bold;
+  margin-bottom: 4px;
+  align-items: center;
+}
+
+.card-checkbox {
+  margin-right: 8px;
+}
+
+
+.checkbox-container {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Rest of your existing styles... */
+
+.feature-request-box {
+  /* background-color: #ccc; */
+  padding: 3px;
+  display: inline-block;
+}
+
+.feature-request-text {
+  margin: 1;
+  font-size: 8px;
+  /* color: grey; */
+  text-align: left;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.ticket-info {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.alert {
+  padding: 10px;
+}

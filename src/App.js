@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Navbar from './components/Navbar';
+import MainPage from './components/MainPage';
 
 function App() {
+  const [grouping, setGrouping] = useState('status');
+  const [ordering, setOrdering] = useState('priority');
+  const [showCheckbox, setShowCheckbox] = useState(false);
+
+  const handleGroupChange = (selectedGrouping) => {
+    setGrouping(selectedGrouping);
+  };
+
+  const handleOrderChange = (selectedOrdering) => {
+    setOrdering(selectedOrdering);
+  };
+
+  const handleCheckboxChange = (checked) => {
+    setShowCheckbox(checked);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar
+        onGroupChange={handleGroupChange}
+        onOrderChange={handleOrderChange}
+        showCheckbox={showCheckbox}
+        onCheckboxChange={handleCheckboxChange}
+      />
+      <MainPage grouping={grouping} ordering={ordering} showCheckbox={showCheckbox} />
     </div>
   );
 }
 
 export default App;
+

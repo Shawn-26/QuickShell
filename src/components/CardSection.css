@@ -1,0 +1,15 @@
+.card-section {
+    margin-bottom: 30px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
